@@ -1,0 +1,1458 @@
+<title>Niiidental &amp; East Credit Dental | Invisalign Campaign Analysis</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap">
+<style>
+  /* ---------------------------------------------------------------
+     Layout: a single reading column with a full-bleed masthead band,
+     and evidence set in cards that break out of the measure when wide.
+     --------------------------------------------------------------- */
+
+  :root {
+    --bg: #F2F4F6;
+    --surface: #FFFFFF;
+    --surface-2: #E9EEF3;
+    --ink: #16212B;
+    --ink-2: #4C5D6D;
+    --ink-3: #7B8B9A;
+    --line: #D9E1E8;
+    --line-strong: #C2CED9;
+    --accent: #2459C7;
+    --ecd: #2459C7;
+    --nii: #B45309;
+    --pos: #17724F;
+    --neg: #A8342A;
+    --shadow: 0 1px 2px rgba(22, 33, 43, .05), 0 8px 24px -16px rgba(22, 33, 43, .35);
+    --measure: 68ch;
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #0E141A;
+      --surface: #18212A;
+      --surface-2: #202B36;
+      --ink: #E7EEF5;
+      --ink-2: #A9B8C5;
+      --ink-3: #748694;
+      --line: #2A3844;
+      --line-strong: #3A4B59;
+      --accent: #7AA2F0;
+      --ecd: #4C7FE8;
+      --nii: #C9743F;
+      --pos: #5FC29B;
+      --neg: #E8897A;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .9);
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --bg: #0E141A;
+    --surface: #18212A;
+    --surface-2: #202B36;
+    --ink: #E7EEF5;
+    --ink-2: #A9B8C5;
+    --ink-3: #748694;
+    --line: #2A3844;
+    --line-strong: #3A4B59;
+    --accent: #7AA2F0;
+    --ecd: #4C7FE8;
+    --nii: #C9743F;
+    --pos: #5FC29B;
+    --neg: #E8897A;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .4), 0 8px 24px -16px rgba(0, 0, 0, .9);
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Schibsted Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-size: 17px;
+    line-height: 1.62;
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  p, li { max-width: var(--measure); }
+
+  /* --- masthead ------------------------------------------------- */
+
+  .masthead {
+    padding-block: 56px 40px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eyebrow {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    margin: 0 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .eyebrow .dot { width: 4px; height: 4px; border-radius: 50%; background: var(--line-strong); }
+
+  h1 {
+    font-size: clamp(34px, 6vw, 54px);
+    line-height: 1.03;
+    letter-spacing: -.028em;
+    font-weight: 600;
+    margin: 0 0 20px;
+    text-wrap: balance;
+    max-width: 20ch;
+  }
+
+  .standfirst {
+    font-size: clamp(17px, 2.2vw, 20px);
+    line-height: 1.55;
+    color: var(--ink-2);
+    margin: 0;
+    max-width: 56ch;
+  }
+
+  .standfirst strong { color: var(--ink); font-weight: 600; }
+
+  .summary-points {
+    margin: 18px 0 0;
+    padding-left: 1.25em;
+    color: var(--ink-2);
+  }
+
+  .summary-points li + li { margin-top: 10px; }
+  .summary-points strong { color: var(--ink); font-weight: 600; }
+
+  /* --- verdict -------------------------------------------------- */
+
+  .verdict {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    box-shadow: var(--shadow);
+    padding: 36px 32px;
+    margin-block: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .verdict-label {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+  }
+
+  .verdict h2 {
+    font-size: clamp(23px, 3.4vw, 31px);
+    line-height: 1.2;
+    letter-spacing: -.018em;
+    font-weight: 600;
+    margin: 0;
+    max-width: 24ch;
+    text-wrap: balance;
+  }
+
+  .verdict p { margin: 0; color: var(--ink-2); }
+
+  /* --- stat strip ----------------------------------------------- */
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    overflow: hidden;
+    margin-block: 20px 0;
+  }
+
+  .stat {
+    background: var(--surface);
+    padding: 20px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+  }
+
+  .stat-label {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .stat-pair {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin-top: 6px;
+  }
+
+  .stat-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 15px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .stat-row .who { font-family: "Schibsted Grotesk", sans-serif; font-size: 11.5px; color: var(--ink-3); }
+
+  .swatch { width: 8px; height: 8px; border-radius: 2px; display: inline-block; margin-right: 6px; flex: none; }
+  .swatch.ecd { background: var(--ecd); }
+  .swatch.nii { background: var(--nii); }
+
+  .stat-delta {
+    margin-top: 10px;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    letter-spacing: .02em;
+    color: var(--ink-2);
+    border-top: 1px solid var(--line);
+    padding-top: 9px;
+  }
+
+  /* --- steps ---------------------------------------------------- */
+
+  .steps {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-block: 64px 0;
+  }
+
+  .step {
+    display: grid;
+    grid-template-columns: 108px minmax(0, 1fr);
+    gap: 0 28px;
+    padding-block: 34px;
+    border-top: 1px solid var(--line);
+  }
+
+  .step:last-child { border-bottom: 1px solid var(--line); }
+
+  .step-marker {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    padding-top: 7px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .step-body { min-width: 0; display: flex; flex-direction: column; gap: 16px; }
+
+  .step h3 {
+    font-size: clamp(20px, 2.6vw, 25px);
+    line-height: 1.25;
+    letter-spacing: -.014em;
+    font-weight: 600;
+    margin: 0;
+    max-width: 30ch;
+    text-wrap: balance;
+  }
+
+  .step p { margin: 0; color: var(--ink-2); }
+  .step p strong { color: var(--ink); font-weight: 600; }
+
+  /* verdict line inside a step */
+  .call {
+    display: flex;
+    gap: 12px;
+    align-items: baseline;
+    font-size: 15.5px;
+    border-left: 2px solid var(--line-strong);
+    padding-left: 14px;
+    color: var(--ink-2);
+    max-width: var(--measure);
+  }
+
+  .call.cleared { border-left-color: var(--pos); }
+  .call.blame { border-left-color: var(--neg); }
+
+  .call-tag {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+
+  .call.cleared .call-tag { color: var(--pos); }
+  .call.blame .call-tag { color: var(--neg); }
+  .call.neutral .call-tag { color: var(--ink-3); }
+
+  /* --- evidence card -------------------------------------------- */
+
+  .card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+    padding: 22px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    min-width: 0;
+  }
+
+  .card-head {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 16px;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+
+  .card-title {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .card-note {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 11px;
+    color: var(--ink-3);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 12.5px;
+    color: var(--ink-2);
+  }
+
+  .legend span { display: inline-flex; align-items: center; }
+
+  /* --- tables --------------------------------------------------- */
+
+  .table-scroll {
+    overflow-x: auto;
+    max-width: 100%;
+    min-width: 0;
+    scrollbar-width: thin;
+    scrollbar-color: var(--line-strong) transparent;
+  }
+
+  .table-scroll::-webkit-scrollbar { height: 6px; }
+  .table-scroll::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 3px; }
+  .table-scroll::-webkit-scrollbar-track { background: transparent; }
+
+  .step-body > *, .card > *, section.block > * { min-width: 0; }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 14px;
+    min-width: 520px;
+  }
+
+  caption {
+    text-align: left;
+    font-size: 12.5px;
+    color: var(--ink-3);
+    padding-bottom: 10px;
+    font-family: "DM Mono", ui-monospace, monospace;
+    letter-spacing: .02em;
+  }
+
+  .table-note {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 12px;
+    letter-spacing: .02em;
+    color: var(--ink-3);
+    margin: 4px 0 0;
+    max-width: none;
+  }
+
+  th, td {
+    text-align: right;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--line);
+    font-variant-numeric: tabular-nums;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  th:first-child, td:first-child {
+    text-align: left;
+    font-family: "Schibsted Grotesk", sans-serif;
+    font-size: 13.5px;
+    white-space: normal;
+  }
+
+  thead th {
+    font-family: "Schibsted Grotesk", sans-serif;
+    font-size: 11px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 500;
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  tbody tr:last-child td { border-bottom: none; }
+
+  tr.emphasis td { background: var(--surface-2); font-weight: 500; }
+  tr.emphasis td:first-child { font-weight: 600; }
+
+  .pos { color: var(--pos); }
+  .neg { color: var(--neg); }
+
+  /* --- bar chart (weekly) --------------------------------------- */
+
+  .plot {
+    position: relative;
+    height: 240px;
+    margin-top: 8px;
+  }
+
+  .gridline {
+    position: absolute;
+    left: 0; right: 0;
+    border-top: 1px solid var(--line);
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    color: var(--ink-3);
+  }
+
+  .gridline span {
+    position: absolute;
+    left: 0;
+    top: -8px;
+    background: var(--surface);
+    padding-right: 6px;
+  }
+
+  .avgline {
+    position: absolute;
+    left: 0; right: 0;
+    border-top: 1px dashed var(--line-strong);
+  }
+
+  .avgline span {
+    position: absolute;
+    right: 0;
+    top: -18px;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    color: var(--ink-3);
+    background: var(--surface);
+    padding-left: 6px;
+  }
+
+  .weeks {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 0;
+    margin-top: 12px;
+    align-items: start;
+  }
+
+  .week-col {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+    padding-inline: 3px;
+  }
+
+  .plot-line {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .plot-line .ln {
+    fill: none;
+    stroke: var(--ecd);
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+  }
+
+  .plot-line .ln.dash {
+    stroke-dasharray: 5 5;
+    stroke: var(--line-strong);
+  }
+
+  .dot {
+    position: absolute;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--ecd);
+    border: 2px solid var(--surface);
+    box-sizing: content-box;
+    transform: translate(-50%, 50%);
+  }
+
+  .week-val {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 12px;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+
+  .week-lab {
+    font-size: 11px;
+    color: var(--ink-3);
+    line-height: 1.3;
+  }
+
+  /* --- waterfall ------------------------------------------------ */
+
+  .wf { display: flex; flex-direction: column; gap: 4px; }
+
+  .wf-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(140px, 2.1fr) 74px;
+    gap: 14px;
+    align-items: center;
+    padding-block: 7px;
+  }
+
+  .wf-label {
+    font-size: 13.5px;
+    color: var(--ink-2);
+    line-height: 1.35;
+  }
+
+  .wf-label b { color: var(--ink); font-weight: 600; display: block; font-size: 14px; }
+
+  .wf-track {
+    position: relative;
+    height: 22px;
+    background: var(--surface-2);
+    border-radius: 2px;
+  }
+
+  .wf-bar {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    border-radius: 2px;
+    min-width: 3px;
+  }
+
+  .wf-bar.base { background: var(--ecd); border-radius: 2px 0 0 2px; }
+  .wf-bar.end { background: var(--nii); border-radius: 2px 0 0 2px; }
+  .wf-bar.down { background: var(--pos); }
+  .wf-bar.up { background: var(--neg); }
+
+  .wf-val {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 12.5px;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+    color: var(--ink);
+  }
+
+  /* --- grouped gate bars ---------------------------------------- */
+
+  .gates {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 6px;
+  }
+
+  .gate {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+  }
+
+  .gate-title {
+    font-size: 13.5px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .gate-rows { display: flex; flex-direction: column; gap: 10px; }
+
+  .gate-row { display: flex; flex-direction: column; gap: 3px; }
+
+  .gate-meta {
+    display: flex;
+    justify-content: space-between;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    color: var(--ink-3);
+  }
+
+  .gate-meta b { color: var(--ink); font-weight: 500; font-variant-numeric: tabular-nums; }
+
+  .gate-track {
+    height: 14px;
+    background: var(--surface-2);
+    border-radius: 2px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  .gate-fill { height: 100%; border-radius: 2px; }
+  .gate-fill.ecd { background: var(--ecd); }
+  .gate-fill.nii { background: var(--nii); }
+
+  /* --- callout -------------------------------------------------- */
+
+  .note {
+    border-left: 2px solid var(--accent);
+    background: var(--surface);
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .note-title {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0;
+  }
+
+  .note p { font-size: 15px; margin: 0; color: var(--ink-2); }
+  .note p strong { color: var(--ink); }
+
+  /* --- sections ------------------------------------------------- */
+
+  section.block {
+    padding-block: 64px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .block-head { display: flex; flex-direction: column; gap: 10px; }
+
+  .block-label {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  .block h2 {
+    font-size: clamp(24px, 3.2vw, 32px);
+    line-height: 1.16;
+    letter-spacing: -.02em;
+    font-weight: 600;
+    margin: 0;
+    max-width: 26ch;
+    text-wrap: balance;
+  }
+
+  .block > p { margin: 0; color: var(--ink-2); }
+  .block > p strong { color: var(--ink); font-weight: 600; }
+
+  /* --- brief list ----------------------------------------------- */
+
+  .brief { display: flex; flex-direction: column; gap: 2px; counter-reset: b; }
+
+  .brief-item {
+    display: grid;
+    grid-template-columns: 34px minmax(0, 1fr);
+    gap: 16px;
+    padding-block: 18px;
+    border-top: 1px solid var(--line);
+  }
+
+  .brief-item:last-child { border-bottom: 1px solid var(--line); }
+
+  .brief-num {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 12px;
+    color: var(--ink-3);
+    padding-top: 3px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .brief-body { min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+
+  .brief-body h3 {
+    font-size: 16.5px;
+    font-weight: 600;
+    margin: 0;
+    line-height: 1.35;
+    letter-spacing: -.005em;
+  }
+
+  .brief-body p { margin: 0; font-size: 15px; color: var(--ink-2); max-width: 62ch; }
+
+  /* --- method --------------------------------------------------- */
+
+  .method {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 26px 34px;
+    padding-top: 6px;
+  }
+
+  .method-item { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+
+  .method-item h3 {
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    font-weight: 400;
+    margin: 0;
+  }
+
+  .method-item p { margin: 0; font-size: 14.5px; color: var(--ink-2); max-width: 44ch; }
+
+  footer {
+    padding-block: 44px 64px;
+    border-top: 1px solid var(--line);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 24px;
+    justify-content: space-between;
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: .04em;
+    color: var(--ink-3);
+  }
+
+  /* --- tooltip -------------------------------------------------- */
+
+  #tip {
+    position: fixed;
+    z-index: 60;
+    pointer-events: none;
+    background: var(--ink);
+    color: var(--bg);
+    font-family: "DM Mono", ui-monospace, monospace;
+    font-size: 11.5px;
+    line-height: 1.45;
+    padding: 6px 9px;
+    border-radius: 3px;
+    opacity: 0;
+    transition: opacity .1s ease;
+    max-width: 260px;
+  }
+
+  #tip.on { opacity: 1; }
+
+  [data-tip] { cursor: default; }
+  [data-tip]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  /* --- responsive ----------------------------------------------- */
+
+  @media (max-width: 760px) {
+    .step { grid-template-columns: minmax(0, 1fr); gap: 8px; padding-block: 28px; }
+    .step-marker { padding-top: 0; }
+    .verdict { padding: 26px 20px; }
+    .card { padding: 18px 16px; }
+    .gates { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+    .wf-row { grid-template-columns: minmax(0, 1fr) 62px; grid-template-areas: "label val" "track track"; gap: 4px 10px; }
+    .wf-label { grid-area: label; }
+    .wf-val { grid-area: val; }
+    .wf-track { grid-area: track; }
+    .eyebrow .dot { display: none; }
+    .eyebrow { gap: 4px 14px; }
+    th, td { padding: 8px 10px; font-size: 12.5px; }
+    td:first-child { white-space: nowrap; }
+    table { min-width: 560px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <p class="eyebrow">
+      <span>Meta media buying</span><span class="dot"></span>
+      <span>Stakeholder report</span><span class="dot"></span>
+      <span>28 October 2026</span>
+    </p>
+    <h1>Executive Summary &amp; Rationale</h1>
+    <p class="standfirst">
+      We conducted a comparative analysis between Niiidental Studio and East Credit Dental.
+    </p>
+    <ul class="summary-points">
+      <li><strong>Rationale:</strong> East Credit Dental is currently running an Invisalign campaign that is producing exceptional lead results. To uncover actionable insights, we compared Niiidental Studio's lower-performing Invisalign campaign against this winning benchmark.</li>
+      <li><strong>Analysis Period:</strong> September 28 – October 27, 2026 (30-day performance window).</li>
+      <li><strong>Objective:</strong> Determine which specific performance metrics in East Credit Dental's ad account are driving its superior results relative to Niiidental Studio.</li>
+    </ul>
+  </header>
+
+  <section class="verdict" aria-labelledby="verdict-title">
+    <p class="verdict-label">Bottom line</p>
+    <h2 id="verdict-title">The largest observed difference is in post-click lead-event rates.</h2>
+    <p>
+      Link click-through rates and video engagement are similar. The largest observed difference is after the
+      click: <strong>5.88% of Niiidental's landing-page views resulted in a recorded lead event, compared with
+      16.33% for East Credit.</strong>
+    </p>
+    <p>
+      Based on the campaigns' recorded Lead events, cost per lead is $64.57 USD for Niiidental and $22.49 CAD for
+      East Credit. The reported costs use different currencies; convert them before interpreting the difference
+      as a financial comparison.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <span class="stat-label">Cost per lead</span>
+        <div class="stat-pair">
+          <div class="stat-row"><span class="who"><i class="swatch ecd"></i>East Credit</span><span>$22.49 CAD</span></div>
+          <div class="stat-row"><span class="who"><i class="swatch nii"></i>Niiidental</span><span>$64.57 USD</span></div>
+        </div>
+        <div class="stat-delta">2.87× at face value</div>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Recorded lead-event rate</span>
+        <div class="stat-pair">
+          <div class="stat-row"><span class="who"><i class="swatch ecd"></i>East Credit</span><span>16.33%</span></div>
+          <div class="stat-row"><span class="who"><i class="swatch nii"></i>Niiidental</span><span>5.88%</span></div>
+        </div>
+        <div class="stat-delta">−10.45 points</div>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Landing-page view rate</span>
+        <div class="stat-pair">
+          <div class="stat-row"><span class="who"><i class="swatch ecd"></i>East Credit</span><span>88.77%</span></div>
+          <div class="stat-row"><span class="who"><i class="swatch nii"></i>Niiidental</span><span>82.42%</span></div>
+        </div>
+        <div class="stat-delta">−6.35 points</div>
+      </div>
+      <div class="stat">
+        <span class="stat-label">Cost per link click</span>
+        <div class="stat-pair">
+          <div class="stat-row"><span class="who"><i class="swatch ecd"></i>East Credit</span><span>$3.26 CAD</span></div>
+          <div class="stat-row"><span class="who"><i class="swatch nii"></i>Niiidental</span><span>$3.13 USD</span></div>
+        </div>
+        <div class="stat-delta">Different currencies; convert before comparing</div>
+      </div>
+    </div>
+
+    <div class="call neutral">
+      <span class="call-tag">Comparison</span>
+      <span>28 September – 27 October 2026 (30 days). East Credit Dental reports in CAD and Niiidental Studio in
+      USD. Rates within each account are comparable without currency conversion. The 2.87× cost-per-lead
+      comparison is at face value; convert currencies before interpreting it as a financial comparison.</span>
+    </div>
+  </section>
+
+  <div class="steps">
+
+    <!-- CAMPAIGN SETUP -->
+    <article class="step">
+      <div class="step-marker">Stage 01</div>
+      <div class="step-body">
+        <h3>1. Confirm the campaigns being compared</h3>
+        <p>
+          Both campaigns ran during the same 30-day window, used the Leads objective and optimised for a pixel lead
+          event. The listed daily budgets are $36 CAD for East Credit and $32 USD for Niiidental; convert currencies
+          before comparing budget levels. Campaign age differs. The results below use each campaign's recorded
+          pixel Lead events.
+        </p>
+
+        <div class="card">
+          <div class="card-head">
+            <span class="card-title">The two campaigns</span>
+            <span class="card-note">28 Sep – 27 Oct 2026</span>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Structure</th>
+                  <th scope="col">East Credit Dental</th>
+                  <th scope="col">Niiidental Studio</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Campaign</td><td>25 June | $3,000 OFF</td><td>9 Oct | $1500 OFF</td></tr>
+                <tr><td>Campaign age at read</td><td>4 months</td><td>2.5 weeks</td></tr>
+                <tr><td>Ad sets</td><td>3</td><td>4</td></tr>
+                <tr><td>Daily budget</td><td>$36 CAD</td><td>$32 USD</td></tr>
+                <tr><td>Spend</td><td>$899.43</td><td>$516.57</td></tr>
+                <tr><td>Objective</td><td>Leads</td><td>Leads</td></tr>
+                <tr class="emphasis"><td>Result event</td><td>Pixel lead</td><td>Pixel lead</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="note">
+          <p class="note-title">Why this analysis uses campaign-level spend</p>
+          <p>
+            Niiidental's account spent $931.91 across the window. Of that amount, $415.34 went to the Summer Special,
+            which ended on 9 October. Including that retired campaign would produce a $51.77 cost per lead, rather
+            than describing the active Invisalign campaign. East Credit had one campaign running, so its campaign
+            and account totals are the same for this comparison.
+          </p>
+        </div>
+      </div>
+    </article>
+
+    <!-- AUDIENCE COST -->
+    <article class="step">
+      <div class="step-marker">Stage 02</div>
+      <div class="step-body">
+        <h3>2. Compare audience costs with the currency difference in mind</h3>
+        <p>
+          East Credit's cost per thousand impressions (CPM) is <strong>$27.73 CAD</strong>; Niiidental's is
+          <strong>$24.96 USD</strong>. Convert these amounts before comparing their costs. Frequency is 3.09 for
+          East Credit and 2.01 for Niiidental.
+        </p>
+        <p>
+          CPM describes the cost of delivery, but it does not explain the final cost per lead on its own. The
+          following stages compare click-through and post-click performance, then review the reported cost-per-lead
+          results with the currency and event-count limitations in mind.
+        </p>
+        <div class="call neutral">
+          <span class="call-tag">Finding</span>
+          <span>Frequency is higher for East Credit. CPM amounts are reported in different currencies and should not be compared without conversion.</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- VIDEO ENGAGEMENT -->
+    <article class="step">
+      <div class="step-marker">Stage 03</div>
+      <div class="step-body">
+        <h3>3. Video engagement is broadly comparable</h3>
+        <p>
+          This comparison includes video ad sets only: East Credit's one video ad set and Niiidental's three video
+          ad sets. Image ad sets are excluded from both accounts.
+        </p>
+
+        <div class="card">
+          <div class="card-head">
+            <span class="card-title">Video engagement metrics, by ad set</span>
+            <span class="card-note">video ad sets only</span>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th scope="col">Stage</th>
+                  <th scope="col">East Credit</th>
+                  <th scope="col">Niiidental</th>
+                  <th scope="col">Difference</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>3-second plays</td><td>1,178</td><td>2,748</td><td>—</td></tr>
+                <tr><td>Impressions</td><td>6,293</td><td>12,067</td><td>—</td></tr>
+                <tr class="emphasis"><td>Hook rate · 3-second plays ÷ impressions</td><td>18.72%</td><td>22.77%</td><td class="pos">Niiidental +4.0 points</td></tr>
+                <tr class="emphasis"><td>Hold rate · ThruPlays ÷ 3-second plays</td><td>20.29%</td><td>17.94%</td><td class="neg">East Credit +2.4 points</td></tr>
+                <tr class="emphasis"><td>Mid retention · 50% plays ÷ ThruPlays</td><td>30.54%</td><td>40.36%</td><td class="pos">Niiidental +9.8 points</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <p>
+          Hook rate measures the share of impressions that reached a 3-second play. Hold rate measures ThruPlays
+          relative to 3-second plays. Mid retention measures 50% video plays relative to ThruPlays. Niiidental
+          leads on hook rate and mid retention; East Credit leads on hold rate. Overall, these results do not show
+          a consistent video-engagement advantage for East Credit.
+        </p>
+        <div class="call cleared">
+          <span class="call-tag">Finding</span>
+          <span>Video results are mixed; they do not point to a clear creative-engagement disadvantage for Niiidental.</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- CLICK PERFORMANCE -->
+    <article class="step">
+      <div class="step-marker">Stage 04</div>
+      <div class="step-body">
+        <h3>4. Click-through rates are similar; compare click costs after conversion</h3>
+        <p>
+          Link click-through rate (CTR) is 0.85% for East Credit and 0.80% for Niiidental. Reported cost per link
+          click is <strong>$3.26 CAD for East Credit and $3.13 USD for Niiidental</strong>. These amounts need
+          currency conversion before their costs can be compared.
+        </p>
+        <p>
+          The click-through rates differ by 0.05 percentage points. This indicates similar click-through
+          performance during the measured period.
+        </p>
+        <div class="call neutral">
+          <span class="call-tag">Finding</span>
+          <span>Click-through rates are similar; a cost-per-click comparison requires currency conversion.</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- LANDING-PAGE VIEWS -->
+    <article class="step">
+      <div class="step-marker">Stage 05</div>
+      <div class="step-body">
+        <h3>5. Landing-page view rate is lower for Niiidental</h3>
+        <p>
+          Landing-page view rate is the share of link clicks that result in a recorded landing-page view. East
+          Credit's rate is 88.77%; Niiidental's is 82.42%, a difference of 6.35 percentage points.
+        </p>
+        <p>
+          This indicates a weaker click-to-page handoff for Niiidental. Check page loading and tracking on both
+          sites to determine whether the difference reflects user drop-off, page performance or event measurement.
+        </p>
+        <div class="call neutral">
+          <span class="call-tag">Finding</span>
+          <span>East Credit has a 6.35-point higher landing-page view rate.</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- LEAD EVENTS -->
+    <article class="step">
+      <div class="step-marker">Stage 06</div>
+      <div class="step-body">
+        <h3>6. Recorded lead-event rate is the largest observed post-click difference</h3>
+        <p>
+          Of the recorded landing-page views, <strong>16.33%</strong> resulted in a lead event for East Credit,
+          compared with <strong>5.88%</strong> for Niiidental. This is the largest difference in the measured
+          funnel. This rate is based on the pixel Lead events reported for the campaigns.
+        </p>
+
+        <div class="card">
+          <div class="card-head">
+            <span class="card-title">Post-click gates</span>
+            <span class="legend">
+              <span><i class="swatch ecd"></i>East Credit</span>
+              <span><i class="swatch nii"></i>Niiidental</span>
+            </span>
+          </div>
+          <div class="gates">
+            <div class="gate">
+              <div class="gate-title">Landing-page view rate</div>
+              <div class="gate-rows">
+                <div class="gate-row">
+                  <div class="gate-meta"><span>East Credit</span><b>88.77%</b></div>
+                  <div class="gate-track"><div class="gate-fill ecd" style="width:88.77%" data-tip="East Credit · 245 landing-page views from 276 link clicks"></div></div>
+                </div>
+                <div class="gate-row">
+                  <div class="gate-meta"><span>Niiidental</span><b>82.42%</b></div>
+                  <div class="gate-track"><div class="gate-fill nii" style="width:82.42%" data-tip="Niiidental · 136 landing-page views from 165 link clicks"></div></div>
+                </div>
+              </div>
+            </div>
+            <div class="gate">
+              <div class="gate-title">Recorded lead-event rate</div>
+              <div class="gate-rows">
+                <div class="gate-row">
+                  <div class="gate-meta"><span>East Credit</span><b>16.33%</b></div>
+                  <div class="gate-track"><div class="gate-fill ecd" style="width:16.33%" data-tip="East Credit · 40 leads from 245 landing-page views"></div></div>
+                </div>
+                <div class="gate-row">
+                  <div class="gate-meta"><span>Niiidental</span><b>5.88%</b></div>
+                  <div class="gate-track"><div class="gate-fill nii" style="width:5.88%" data-tip="Niiidental · 8 leads from 136 landing-page views"></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+  </div>
+
+  <!-- CONTROL TEST -->
+  <section class="block">
+    <div class="block-head">
+      <span class="block-label">Additional evidence</span>
+      <h2>East Credit's ad sets show different CPLs alongside different lead-event rates</h2>
+    </div>
+    <p>
+      Within East Credit's account, CPM varies 1.7× across the three ad sets, while the recorded lead-event
+      rate varies 4.1×. The table shows how each ad set's click, landing-page and lead-event metrics relate to its
+      cost per lead. These figures use the reported Lead events and show an association, not proof of cause.
+    </p>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">East Credit ad sets, 28 Sep – 27 Oct</span>
+        <span class="card-note">CAD</span>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Ad set</th>
+              <th scope="col">Spend</th>
+              <th scope="col">Link CTR</th>
+              <th scope="col">CPM</th>
+              <th scope="col">Cost / link click</th>
+              <th scope="col">LP view rate</th>
+              <th scope="col">Recorded lead-event rate</th>
+              <th scope="col">Cost / lead</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="emphasis"><td>Wedding | Video</td><td>$254.77</td><td>1.10%</td><td>$40.48</td><td>$3.69</td><td>82.61%</td><td>28.07%</td><td>$15.92</td></tr>
+            <tr><td>All Detail | Image Ads</td><td>$391.80</td><td>0.77%</td><td>$23.85</td><td>$3.09</td><td>90.55%</td><td>16.52%</td><td>$20.62</td></tr>
+            <tr><td>Oral Health | Image Ads</td><td>$252.86</td><td>0.82%</td><td>$26.02</td><td>$3.16</td><td>91.25%</td><td>6.85%</td><td>$50.57</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <p>
+      The Wedding | Video ad set has the highest CPM ($40.48) and the lowest reported cost per lead ($15.92).
+      All Detail | Image Ads has the lowest cost per link click ($3.09). Oral Health | Image Ads costs $3.16 per
+      link click and has the highest reported cost per lead at $50.57.
+    </p>
+    <p>
+      In this account, the ad set with the lowest CPM is not the one with the lowest cost per lead. This reinforces
+      the need to examine post-click results as well as media costs when comparing performance.
+    </p>
+
+    <div class="note">
+      <p class="note-title">How to use this comparison</p>
+      <p>
+        Compare CPM, click costs, landing-page views, recorded lead events and cost per lead together. A lower
+        media cost does not necessarily produce a lower cost per lead. Confirm the event definitions before
+        attributing the difference to the website or the campaign.
+      </p>
+    </div>
+  </section>
+
+  <!-- TREND -->
+  <section class="block">
+    <div class="block-head">
+      <span class="block-label">Performance over time</span>
+      <h2>East Credit's weekly cost per lead varied during the period</h2>
+    </div>
+    <p>
+      The 30-day average combines weeks with different lead counts and costs. The weekly view below adds context
+      to the overall average.
+    </p>
+
+    <div class="card">
+      <div class="card-head">
+        <span class="card-title">East Credit · cost per lead by week</span>
+        <span class="card-note">CAD · zero-based</span>
+      </div>
+      <div class="plot" role="img" aria-label="East Credit cost per lead by week, zero-based to 140 dollars. Week of 28 September: 126.56. Week of 5 October: 20.97. Week of 12 October: no leads recorded. Week of 19 October: 13.44. 26 to 27 October: 8.18. The thirty-day average is 22.49.">
+        <div class="gridline" style="bottom:0"><span>$0</span></div>
+        <div class="gridline" style="bottom:35.71%"><span>$50</span></div>
+        <div class="gridline" style="bottom:71.43%"><span>$100</span></div>
+        <div class="avgline" style="bottom:16.06%"><span>30-day average $22.49</span></div>
+        <svg class="plot-line" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path class="ln" d="M10,9.6 L30,85.02" />
+          <path class="ln dash" d="M30,85.02 L70,90.4" />
+          <path class="ln" d="M70,90.4 L90,94.16" />
+        </svg>
+        <div class="dot" style="left:10%;bottom:90.4%"   data-tip="28 Sep–4 Oct · $253.11 spent · 2 leads · $126.56 per lead"></div>
+        <div class="dot" style="left:30%;bottom:14.98%"  data-tip="5–11 Oct · $251.64 spent · 12 leads · $20.97 per lead"></div>
+        <div class="dot" style="left:70%;bottom:9.6%"    data-tip="19–25 Oct · $215.09 spent · 16 leads · $13.44 per lead"></div>
+        <div class="dot" style="left:90%;bottom:5.84%"   data-tip="26–27 Oct (2 days) · $81.77 spent · 10 leads · $8.18 per lead"></div>
+      </div>
+      <div class="weeks">
+        <div class="week-col"><span class="week-val">$126.56</span><span class="week-lab">28 Sep–4 Oct</span></div>
+        <div class="week-col"><span class="week-val">$20.97</span><span class="week-lab">5–11 Oct</span></div>
+        <div class="week-col"><span class="week-val" style="color:var(--ink-3)">no leads</span><span class="week-lab">12–18 Oct</span></div>
+        <div class="week-col"><span class="week-val">$13.44</span><span class="week-lab">19–25 Oct</span></div>
+        <div class="week-col"><span class="week-val">$8.18</span><span class="week-lab">26–27 Oct*</span></div>
+      </div>
+    </div>
+
+    <p class="table-note">East Credit · weekly, recomputed from summed counts (not averaged percentages). *Two days.</p>
+
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Week</th>
+            <th scope="col">Spend</th>
+            <th scope="col">Link CTR</th>
+            <th scope="col">CPM</th>
+            <th scope="col">Cost / link click</th>
+            <th scope="col">LP view rate</th>
+            <th scope="col">Leads</th>
+            <th scope="col">Cost / lead</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>28 Sep – 4 Oct</td><td>$253.11</td><td>0.64%</td><td>$26.96</td><td>$4.22</td><td>76.67%</td><td>2</td><td>$126.56</td></tr>
+          <tr><td>5 – 11 Oct</td><td>$251.64</td><td>0.84%</td><td>$30.24</td><td>$3.59</td><td>95.71%</td><td>12</td><td>$20.97</td></tr>
+          <tr><td>12 – 18 Oct</td><td>$97.82</td><td>0.92%</td><td>$27.99</td><td>$3.06</td><td>81.25%</td><td>0</td><td>—</td></tr>
+          <tr><td>19 – 25 Oct</td><td>$215.09</td><td>0.98%</td><td>$27.38</td><td>$2.79</td><td>101.30%</td><td>16</td><td>$13.44</td></tr>
+          <tr><td>26 – 27 Oct*</td><td>$81.77</td><td>1.10%</td><td>$24.21</td><td>$2.21</td><td>75.68%</td><td>10</td><td>$8.18</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>
+      East Credit recorded two leads in the first week, at $126.56 per lead. Subsequent weekly results varied:
+      one week recorded no leads, while the final two-day period recorded ten leads at $8.18 each. The 30-day
+      average of $22.49 therefore does not describe every week in the period.
+    </p>
+    <p>
+      Niiidental's replacement campaign recorded eight leads across three weekly buckets. This is a small sample
+      for judging a trend or declaring a winning variant. The campaigns are also at different stages of their
+      lifecycle, so use additional data before treating the 30-day cost-per-lead multiple as a current run rate.
+    </p>
+
+    <div class="call neutral">
+      <span class="call-tag">Next review</span>
+      <span>Review again on 5 November using the same comparison period and campaign criteria. The reported 5.5×
+      difference for the latest complete week is based on three Niiidental leads versus 16 East Credit leads, so
+      interpret it cautiously.</span>
+    </div>
+  </section>
+
+  <!-- PIXEL -->
+  <section class="block">
+    <div class="block-head">
+      <span class="block-label">Lead-event measurement</span>
+      <h2>Cost per lead is based on the campaigns' recorded Lead events</h2>
+    </div>
+    <p>
+      Over the 30-day period, East Credit recorded <strong>40 Lead events</strong> and Niiidental recorded
+      <strong>8 Lead events</strong>. The reported cost per lead is calculated using these campaign results.
+    </p>
+    <p>
+      Both campaigns optimise for the pixel Lead event. Confirm that this event is configured consistently and
+      fires as intended in both campaigns. Cost comparisons between the accounts also require currency conversion.
+    </p>
+    <div class="call blame">
+      <span class="call-tag">Measurement check</span>
+      <span>Verify that the pixel Lead event is configured consistently in both campaigns before using the
+      reported cost-per-lead comparison.</span>
+    </div>
+  </section>
+
+  <!-- BRIEF -->
+  <section class="block">
+    <div class="block-head">
+      <span class="block-label">Recommended next steps</span>
+      <h2>Actions to take, in priority order</h2>
+    </div>
+
+    <div class="brief">
+      <div class="brief-item">
+        <div class="brief-num">01</div>
+        <div class="brief-body">
+          <h3>1. Verify the pixel Lead event in both campaigns</h3>
+          <p>
+            Confirm the campaigns use the same Lead event and that it is configured consistently. The reported
+            lead counts and cost per lead are based on this event.
+          </p>
+        </div>
+      </div>
+      <div class="brief-item">
+        <div class="brief-num">02</div>
+        <div class="brief-body">
+          <h3>2. Review Niiidental's landing-page experience</h3>
+          <p>
+            Compare page load time, redirects, mobile rendering, form length, calls to action and trust information.
+            Use East Credit's page as a reference, then test changes against Niiidental's own results.
+          </p>
+        </div>
+      </div>
+      <div class="brief-item">
+        <div class="brief-num">03</div>
+        <div class="brief-body">
+          <h3>3. Keep Lead-event tracking consistent</h3>
+          <p>
+            Check that the pixel Lead event fires as intended on both sites and that the campaigns optimize for
+            the same event. Keep landing-page view tracking consistent to compare the post-click funnel.
+          </p>
+        </div>
+      </div>
+      <div class="brief-item">
+        <div class="brief-num">04</div>
+        <div class="brief-body">
+          <h3>4. Keep the current creative in place while investigating</h3>
+          <p>
+            The video results are mixed, and click-through rates are similar. The cost-per-click amounts are
+            reported in different currencies and should be converted before comparison. The current metrics do not
+            show a clear creative-engagement problem to address first.
+          </p>
+        </div>
+      </div>
+      <div class="brief-item">
+        <div class="brief-num">05</div>
+        <div class="brief-body">
+          <h3>5. Review the results again on 5 November</h3>
+          <p>
+            Use the same campaign criteria and weekly reporting. The additional data will help show whether
+            Niiidental's cost per lead is stabilising; the current three weekly buckets are not enough to establish
+            a reliable trend.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- METHOD -->
+  <section class="block">
+    <div class="block-head">
+      <span class="block-label">Method</span>
+      <h2>How these numbers were produced</h2>
+    </div>
+
+    <div class="method">
+      <div class="method-item">
+        <h3>Funnel order</h3>
+        <p>
+          Results are reviewed in this order: link CTR, cost per link click, landing-page view rate, recorded lead
+          events per landing-page view, and cost per lead. CPM and frequency provide context on delivery costs;
+          they do not by themselves explain conversion results.
+        </p>
+      </div>
+      <div class="method-item">
+        <h3>Why link CTR is used</h3>
+        <p>
+          CTR (all) was 1.41% against 1.12%, and it is not headlined here because it counts reactions, comments and
+          profile taps as well as clicks. Link CTR focuses on people who clicked through to the site.
+        </p>
+      </div>
+      <div class="method-item">
+        <h3>Currencies</h3>
+        <p>
+          East Credit reports in CAD and Niiidental in USD. Rates within each account do not require conversion.
+          The 2.87× cost-per-lead multiple is a face-value comparison; convert currencies before using it as a
+          financial comparison.
+        </p>
+      </div>
+      <div class="method-item">
+        <h3>Sample</h3>
+        <p>
+          East Credit recorded 40 Lead events from 276 link clicks; Niiidental recorded 8 from 165. Niiidental's
+          lower event count is a limited sample for judging performance.
+        </p>
+      </div>
+      <div class="method-item">
+        <h3>Buckets</h3>
+        <p>
+          Weekly rates are recomputed from summed counts within each week rather than averaging daily
+          percentages. The 26–27 October bucket covers two days and is marked in the report.
+        </p>
+      </div>
+      <div class="method-item">
+        <h3>What would change the read</h3>
+        <p>
+          Consistent pixel Lead-event tracking and additional Niiidental data. These could change the size or
+          interpretation of the reported difference.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span>Niiidental Studio · Invisalign · 28 Sep – 27 Oct 2026</span>
+    <span>Figures re-read from Ads Manager on 28 October 2026</span>
+  </footer>
+
+</div>
+
+<div id="tip" role="status" aria-live="polite"></div>
+
+<script>
+  (function () {
+    var tip = document.getElementById('tip');
+    if (!tip) return;
+    var active = null;
+
+    function show(el, x, y) {
+      var text = el.getAttribute('data-tip');
+      if (!text) return;
+      tip.textContent = text;
+      tip.classList.add('on');
+      move(x, y);
+    }
+
+    function move(x, y) {
+      var pad = 12;
+      var w = tip.offsetWidth;
+      var h = tip.offsetHeight;
+      var left = x + pad;
+      var top = y - h - pad;
+      if (left + w > window.innerWidth - 8) left = x - w - pad;
+      if (left < 8) left = 8;
+      if (top < 8) top = y + pad;
+      tip.style.left = left + 'px';
+      tip.style.top = top + 'px';
+    }
+
+    function hide() {
+      tip.classList.remove('on');
+      active = null;
+    }
+
+    document.addEventListener('pointerover', function (e) {
+      var el = e.target.closest ? e.target.closest('[data-tip]') : null;
+      if (!el || el === active) return;
+      active = el;
+      show(el, e.clientX, e.clientY);
+    });
+
+    document.addEventListener('pointermove', function (e) {
+      if (active) move(e.clientX, e.clientY);
+    });
+
+    document.addEventListener('pointerout', function (e) {
+      var el = e.target.closest ? e.target.closest('[data-tip]') : null;
+      if (el && el === active) hide();
+    });
+
+    document.addEventListener('focusin', function (e) {
+      var el = e.target.closest ? e.target.closest('[data-tip]') : null;
+      if (!el) return;
+      var r = el.getBoundingClientRect();
+      active = el;
+      show(el, r.left + r.width / 2, r.top);
+    });
+
+    document.addEventListener('focusout', hide);
+    window.addEventListener('scroll', hide, { passive: true });
+  })();
+</script>
